@@ -1,0 +1,84 @@
+BODY {
+    background-image:url('http://imfou.actioncom.fr/dbIMAGE/barriquand/hd/I_1442484025109.JPG');
+}
+
+H1 {
+    color: blue;
+    background-color: white;
+    text-align: center;
+    font-size: 42px;
+}
+
+.bande {
+    display: flex;
+}
+
+.txt {
+    position: absolute;
+    right: 10px;
+    font-style: italic;
+    font-family: monospace;
+}
+
+.box {
+    width: 5%;
+    border: 1px solid black;
+}
+
+.alca {
+    background-color: lightcoral;
+}
+
+.alca-ter {
+    background-color: lightgoldenrodyellow;
+}
+
+.lan {
+    background-color: palevioletred;
+}
+
+.acti {
+    background-color: violet;
+}
+
+.trans {
+    background-color: lightpink;
+}
+
+.poor {
+    background-color: lightgray;
+}
+
+.metal {
+    background-color: lightgreen;
+}
+
+.othernometal {
+    background-color: greenyellow;
+}
+
+.halo {
+    background-color: lightgoldenrodyellow;
+}
+
+.gaz {
+    background-color: lightblue;
+}
+
+.other {
+    background-color: whitesmoke;
+}
+
+.n {
+    text-align: left;
+    font-size: 1vw;
+}
+
+.name {
+    font-size: 2vw;
+}
+
+.mass {
+    text-align: right;
+    font-size: 1vw;
+}
