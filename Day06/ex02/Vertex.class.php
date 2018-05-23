@@ -45,7 +45,7 @@ Class Vertex
 		return;
 	}
 
-	public function		setY($x)
+	public function		setY($y)
 	{
 		$this->_y = $y;
 		return;

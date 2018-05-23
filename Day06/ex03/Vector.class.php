@@ -1,5 +1,6 @@
 <?PHP
 require_once 'Vertex.class.php';
+
 Class Vector
 {
 	private $_x;
@@ -13,22 +14,22 @@ Class Vector
 		echo( file_get_contents( "Vector.doc.txt" ) );
 	}
 
-	public function		getX( )
+	public function		getX()
 	{
 		return ($this->_x);
 	}
 
-	public function		getY( )
+	public function		getY()
 	{
 		return ($this->_y);
 	}
 
-	public function		getZ( )
+	public function		getZ()
 	{
 		return ($this->_z);
 	}
 
-	public function		getW( )
+	public function		getW()
 	{
 		return ($this->_w);
 	}
