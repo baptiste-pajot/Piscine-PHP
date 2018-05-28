@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calc</title>
+		<style type="text/css" media="screen">
+#form {
+	width: 90%;
+	margin: auto;
+	margin-top: 30%;
+}
+	.field {
+		font-size: 3vw;
+	}
+		</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#btn").click(function(){
+		var x, y, i, op, res;
+		x = parseFloat($("#x").val());
+		y = parseFloat($("#y").val());
+		op = $("#op").val();
+		console.log(x);
+		console.log(y);
+		console.log(op);
+		if (x >= 0 && y>= 0 && Number.isInteger(x) && Number.isInteger(y))
+		{
+			if (y == 0 && (op =="/" || op == "%"))
+			{
+				console.log("It's over 9000!");
+				alert("It's over 9000!");
+			}
+			else
+			{
+				if (op == "+")
+					res = x + y;
+				else if (op == "-")
+					res = x - y;
+				else if (op == "*")
+					res = x * y;
+				else if (op == "/")
+					res = x / y;
+				else if (op == "%")
+					res = x % y;
+				console.log(res);
+				alert(res);
+			}
+		}
+		else
+			alert("Error :(");
+	});
+});
+
+function use_me()
+{
+	alert("Please, use me ...");
+}
+</script>
+	</head>
+	<body onload="setInterval(use_me, 30000)">
+		<form id="form" method="POST" action="">
+			<input class="field" id="x" type="number" name="x" value=""/>
+			<select class="field" id="op" name ="op">
+				<option id="plus" value="+">+</option>
+				<option id="minus" value="-">-</option>
+				<option id="mult" value="*">*</option>
+				<option id="div"value="/">/</option>
+				<option id="mod" value="%">%</option>
+			</select>
+			<input class="field" id="y" type="number" name="y" value="" maxlength="7"/>
+			<input class="field" id="btn" type="submit" value="Try me!"/>
+		</form>
+	</body>
+</html>

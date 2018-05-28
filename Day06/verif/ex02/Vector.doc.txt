@@ -1,0 +1,38 @@
+
+<- Vector ----------------------------------------------------------------------
+The Vector class handles vector in direct orthonormal basis.
+The Vector is composed of 4 coordinates (x, y, z and w).
+
+An instance can be constructed with a destination Vertex and an origin Vertex.
+The origine Vertex is optional.
+
+The class provides the following methods :
+
+float	magnitude();
+Return the Vector norm.
+
+Vector	normalize();
+Return the Vector after normalization. If the Vector is already normalized,
+it return a copy of the Vector.
+
+Vector	add( Vector $rhs );
+Return the sum of 2 Vectors.
+
+Vector	sub( Vector $rhs );
+Return the difference of 2 Vectors.
+
+Vector	opposite();
+Return the opposite of Vector.
+
+Vector	scalarProduct( $k );
+Return the product of Vector with a scalar.
+
+float	dotProduct( Vector $rhs );
+Return the scalar product of 2 Vectors.
+
+float	cos( Vector $rhs );
+Return the angle cosinus between 2 Vectors.
+
+Vectort	crossProduct( Vector $rhs );
+Return the vectorial product of 2 Vectors.
+---------------------------------------------------------------------- Vector ->

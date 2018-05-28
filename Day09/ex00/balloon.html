@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Balloon</title>
+	<style type="text/css" media="screen">
+	#balloon {
+		margin: auto;
+		margin-top: 30%;
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		border-radius: 100px;
+	}
+    </style>
+</head>
+<body>
+	<div id= balloon onmouseout="out()" onclick="blow()"></div>
+<script type="text/javascript">
+var w = 200;
+var c = "red"
+function blow()
+{
+	if (w < 420)
+		w += 10;
+	else
+		w = 200;
+	if (c == "red")
+		c = "green";
+	else if (c == "green")
+		c = "blue";
+	else if (c == "blue")
+		c = "red";
+	document.getElementById('balloon').style.width = w + "px";
+	document.getElementById('balloon').style.height = w + "px";
+	document.getElementById('balloon').style.borderRadius = w / 2 + "px";
+	document.getElementById('balloon').style.backgroundColor = c;
+}
+
+function out()
+{
+	if (w > 200)
+		w -= 10;
+	if (c == "red")
+		c = "blue";
+	else if (c == "green")
+		c = "red";
+	else if (c == "blue")
+		c = "green";
+	document.getElementById('balloon').style.width = w + "px";
+	document.getElementById('balloon').style.height = w + "px";
+	document.getElementById('balloon').style.borderRadius = w / 2 + "px";
+	document.getElementById('balloon').style.backgroundColor = c;
+}
+</script>
+</body>
+</html>

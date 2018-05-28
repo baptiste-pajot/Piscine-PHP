@@ -1,0 +1,19 @@
+
+<- Camera ----------------------------------------------------------------------
+The Camera class handles transformation between coordinates in real world and
+coordinates in the plane world or the screen world.
+
+An instance Camera nust be constructed with array parameters :
+- 'origin' Vertex of the camera position
+- 'orientation' Matrix of the camera orientation
+- 'witdh' and 'height' to calculate ratio or directly 'ratio' (float value)
+- 'fov' field o view in degree
+- 'near' the near clipping  plant
+- 'far' the far clipping plant
+
+The class Camera provides one method:
+
+Vertex watchVertex( Vertex $worldVertex )
+Tranform the Vertex coordinates in the real world in a Vertex coordinates in
+the plan world or the screen world.
+---------------------------------------------------------------------- Camera ->

@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calc</title>
+		<style type="text/css" media="screen">
+#form {
+	width: 90%;
+	margin: auto;
+	margin-top: 30%;
+}
+	.field {
+		font-size: 3vw;
+	}
+		</style>
+		<script type="text/javascript">
+function calc()
+{
+	var x, y, i, op, res;
+	x = parseFloat(document.getElementById("x").value);
+	y = parseFloat(document.getElementById("y").value);
+	i = document.getElementById("op").selectedIndex;
+	op = document.getElementsByTagName("option")[i].value;
+	if (x >= 0 && y>= 0 && Number.isInteger(x) && Number.isInteger(y))
+	{
+		if (y == 0 && (op =="/" || op == "%"))
+		{
+			console.log("It's over 9000!");
+			alert("It's over 9000!");
+		}
+		else
+		{
+			if (op == "+")
+				res = x + y;
+			else if (op == "-")
+				res = x - y;
+			else if (op == "*")
+				res = x * y;
+			else if (op == "/")
+				res = x / y;
+			else if (op == "%")
+				res = x % y;
+			console.log(res);
+			alert(res);
+		}
+	}
+	else
+		alert("Error :(");
+}
+
+function use_me()
+{
+		alert("Please, use me ...");
+}
+		</script>
+	</head>
+	<body onload="setInterval(use_me, 30000)">
+		<form id="form" method="POST" action="">
+			<input class="field" id="x" type="number" name="x" value=""/>
+			<select class="field" id="op" name ="op">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input class="field" id="y" type="number" name="y" value="" maxlength="7"/>
+			<input class="field" type="submit" value="Try me!" onclick="calc()"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles a point representation in space with x,y,z,w and color
+ parameters.
+
+ An instance must be constructed with keys 'x', 'y' and 'z' minimum.
+ Key 'w' is optional and set to 1.0 by default.
+ Key 'color' is also optional and set to white color by default.
+---------------------------------------------------------------------- Vertex ->

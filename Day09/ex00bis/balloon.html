@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Balloon</title>
+	<style type="text/css" media="screen">
+	#balloon {
+		margin: auto;
+		margin-top: 30%;
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		border-radius: 100px;
+	}
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var w = 200;
+var c = "red"
+$(document).ready(function(){
+	$("#balloon").click(function(){
+		if (w < 420)
+			w += 10;
+		else
+			w = 200;
+		if (c == "red")
+			c = "green";
+		else if (c == "green")
+			c = "blue";
+		else if (c == "blue")
+			c = "red";
+		$("#balloon").css("width", w + "px");
+		$("#balloon").css("height", w + "px");
+		$("#balloon").css("border-radius", w / 2 + "px");
+		$("#balloon").css("background-color", c);
+		console.log(w);
+	});
+	$("#balloon").mouseout(function(){
+		if (w > 200)
+			w -= 10;
+		if (c == "red")
+			c = "blue";
+		else if (c == "green")
+			c = "red";
+		else if (c == "blue")
+			c = "green";
+		$("#balloon").css("width", w + "px");
+		$("#balloon").css("height", w + "px");
+		$("#balloon").css("border-radius", w / 2 + "px");
+		$("#balloon").css("background-color", c);
+		console.log(w);
+	});
+});
+</script>
+</head>
+<body>
+	<div id="balloon"></div>
+</body>
+</html>

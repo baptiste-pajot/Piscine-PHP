@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>To Do List</title>
+		<style type="text/css" media="screen">
+h1{
+	font-family: Helvetica;
+	font-style: sans-serif;
+}
+
+#btn{
+	background: DeepSkyBlue;
+	color: White;
+	text-align: center;
+	position: relative;
+	font-family: Helvetica;
+	font-style: sans-serif;
+	font-size: 3vw;
+	cursor: pointer;
+	width: 20%;
+	height: 4vw;
+	border-radius:10px;
+
+}
+
+#ft_list{
+	height : 90%;
+}
+
+.element {
+	margin-top: 2vw;
+	height: 5vw;
+	border: 1px solid;
+	border-color: black;
+	border-radius:10px;
+	padding-top: 1vw;
+	padding-left: 1vw;
+	font-family: Helvetica;
+	font-style: sans-serif;
+	font-size: 3vw;
+	cursor: pointer;
+	overflow: hidden;
+}
+		</style>
+		<script type="text/javascript" src="todo.js"></script>
+	</head>
+	<body onload="display()">
+		<h1>To Do List :</h1>
+		<div id="btn" onclick="new_elem()">New</div>
+		<div id="ft_list"></div>
+	</body>
+</html>
